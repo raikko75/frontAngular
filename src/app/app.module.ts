@@ -29,7 +29,8 @@ import { NewFaceSnapComponent } from './new-face-snap/new-face-snap.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
 
   ],
   providers: [],
