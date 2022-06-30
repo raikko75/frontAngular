@@ -54,13 +54,12 @@ export class TestGetService {
     return this.httpClient.get<FaceSnap[]>('http://localhost:3000/facesnaps');
   }
 
-  snapFaceSnapbyid(id:number): Observable<FaceSnap> {
-
-    return this.httpClient.get<FaceSnap>('http://localhost:3000/facesnaps/'+{id})
+  getFaceSnapById(faceSnapId: number): Observable<FaceSnap> {
+    return this.httpClient.get<FaceSnap>(`http://localhost:3000/facesnaps/${faceSnapId}`);
   }
 
   getFaceSnapByIdforPlus(id : number, snapType: 'snap' | 'unsnap'): void {
-  const faceSnap = this.snapFaceSnapbyid(id);
+  const faceSnap = this.getFaceSnapById(id);
  }
  addFaceSnap(formValue : {title: string , description:string, imageUrl:string ,location ? :string}): void {
     const faceSnap:FaceSnap = {
