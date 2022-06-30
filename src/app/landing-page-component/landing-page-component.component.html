@@ -1,0 +1,23 @@
+<div class="landing-block">
+  <form #emailForm="ngForm" (ngSubmit) = "onSubmitForm(emailForm)">
+    <label for="emailInput">Inscrivez vous</label>
+    <input type="email" id="emailInput" [(ngModel)]="userEmail" name="userEmail">
+    <button type="submit">Ok</button>
+  </form>
+  <img src="assets/snapface.png" alt="Snapface logo">
+  <div class="landing-links">
+    <button (click)="onContinue()">Continuer vers Snapface</button>
+  </div>
+</div>
+
+
+
+
+<!--Ajoutez FormsModule aux  imports  de votre AppModule pour débloquer les formulaires template ;-->
+
+<!--Utilisez le two-way binding avec  [(ngModel)]  pour lier une variable au contenu d'un  input  ;-->
+
+<!--Liez votre méthode d'envoi de formulaire au bouton de type  submit  avec l'événement  ngSubmit  ;-->
+
+<!--Envoyez le formulaire en entier avec une référence locale à la directive  ngForm  et une méthode qui attend un argument de type  NgForm  – n'oubliez pas d'ajouter des attributs  name  à tous vos  input  !-->
+
